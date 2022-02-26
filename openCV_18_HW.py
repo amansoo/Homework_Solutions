@@ -18,10 +18,10 @@ width += 20
 def face_rec(frame) -> list:
     """Returns with a box around the face"""
     frameRGB = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-    faces = face_detection_analyser_mp.process(frameRGB)
+    faces_class = face_detection_analyser_mp.process(frameRGB)
     faces_location = []
-    if faces.detections:
-        for face in faces.detections:
+    if faces_class.detections:
+        for face in faces_class.detections:
             face_location = []
             # print(faces.detections)
             top_left = (int(face.location_data.relative_bounding_box.xmin * width), 
