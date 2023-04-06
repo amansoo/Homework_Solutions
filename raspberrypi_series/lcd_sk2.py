@@ -2,6 +2,8 @@
 # temperature sensor does not work with my raspberry pi
 # for some reason. We use an ESP32 in this project but
 # that can be substituted with an arduino if need be.
+# the LCD1602 library can be found on https://www.toptechboy.com and
+# searching for library for LCD
 import LCD1602
 import time
 import serial
